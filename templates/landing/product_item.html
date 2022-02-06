@@ -1,0 +1,20 @@
+
+
+
+<div class="z col-6 col-md-4 col-lg-3 my-5">
+
+   <a class="text-dark" href="{% url 'product' product_image.product.id %}">
+    <div class="text-center"><img class="brdr" src="{{ product_image.image.url }}" width="200" height="300" alt="rec"></div>
+    {% if product_image.product.discount %}
+        <div class="discount-container">
+            <span>{{ product_image.product.discount }}%</span>
+        </div>
+    {% endif %}
+	 <p class="h5 text-center text-black card-height mt-3">{{ product_image.product.name }}</p>
+   </a>
+    <hr>
+	 <p class="h5 text-center mt-3">₪{{ product_image.product.price }}</p>
+   <a href="{% url 'product' product_image.product.id %}">
+	  <div class="text-center add-to-card-btn"><button class="btn btn-dark" data-toggle="modal" data-target="#modal2"><i class="fas fa-shopping-basket link-hovered"> הוספה לסל</i></button></div>
+  </a>
+  </div>

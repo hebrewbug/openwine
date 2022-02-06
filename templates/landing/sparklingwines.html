@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<div class="container-fluid content">
+<div class="container-fluid">
+			<div class="row justify-content-center py-5">
+				<div class="col-10 contentbox">
+					<div class="row my-5 justify-content-center">
+
+
+
+            <div class="section section2 phones-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                        <div class="header1"><h1>יין מבעבע ורוזה</h1></div>
+                      </div>
+                        {% for product_image in products_images_sparklingwines %}
+                            {% include 'landing/product_item.html' %}
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

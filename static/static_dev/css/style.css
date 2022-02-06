@@ -1,0 +1,478 @@
+/*
+
+html, body{
+    height: 100%;
+    max-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #edeef0;
+}
+
+.jumbotron {
+      background-color: #f4511e; /* Orange */
+/*      color: #ffffff;
+}
+
+.wrapper{
+    min-height: 100%;
+}
+
+.wrapper-content{
+    overflow: auto;
+    padding-bottom: 180px; /* must be same height as the footer */
+/*}
+
+.footer{
+    position: relative;
+    margin-top: -180px; /* negative value of footer height */
+/*   height: 180px;
+    clear: both;
+    background-color: white;
+}
+
+.section-top{
+    margin-bottom: 20px
+}
+
+.product-description-tabs{
+    padding: 10px;
+}
+
+.section{
+    padding: 50px 0;
+}
+
+.section h1{
+    margin-bottom: 40px;
+}
+
+.product-item{
+    height: 360px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    position: relative;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.add-to-card-btn{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.discount-container{
+    position: absolute;
+    top: 30%;
+    background: #55e073;
+    width: 30%;
+    color: white;
+    font-weight: 700;
+    padding: 3px;
+}
+
+.section-delivery{
+    height: 300px;
+    background-color: darkseagreen;
+    text-align: center;
+    color: white;
+}
+
+.product-image-item{
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.navbar-top{
+    min-height: 10px;
+    height: 20px;
+    background-color: green;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-main{
+    background-color: #55e073;
+    border: none;
+    border-radius: 0;
+}
+
+.basket-container{
+    position: relative;
+    padding: 15px 10px;
+}
+
+.basket-items{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background-color: #55e093;
+    z-index: 10;
+    padding: 10px;
+}
+
+.form-error{
+    color: red;
+}*/
+
+/*NEWDESIGN*/
+
+@media (min-width: 500px) {
+	.navbar1 {
+		display: block!important;
+		visibility:visible!important;
+	}
+
+	.navbar-toggler {
+		display: none;
+	}
+	.searchbox-sm {
+		display: none;
+	}
+	.footer-sm {
+		display: none;
+	}
+}
+
+@media (max-width: 499.98px) {
+	.topnav1 {
+		display: block!important;
+		visibility:visible!important;
+	}
+	.searchbox-md {
+		display: none;
+	}
+	.footer-lg {
+		display: none;
+	}
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow:none !important;
+  border:1px solid white;
+}
+
+a:link {
+	text-decoration: none;
+	outline: none !important;
+  box-shadow: none !important;
+}
+.navbarbg {
+  /*overflow: hidden;*/
+  background-color: white;/* #690000*/
+
+}
+
+#menu  {
+	position: absolute;
+	background-color: #690000;
+	right: -42%;
+}
+
+#menu2  {
+	position: absolute;
+	background-color: #690000;
+	right: -180%;
+}
+
+#menu3  {
+	position: absolute;
+	background-color: #690000;
+	right: -24%;
+}
+
+#menu4  {
+	position: absolute;
+	background-color: #690000;
+	right: -19%;
+}
+
+#menu5  {
+	position: absolute;
+	background-color: #690000;
+	right: -70%;
+}
+#menu6  {
+	position: absolute;
+	background-color: #690000;
+	right: -20%;
+}
+
+#menu-item {
+	background-color: #690000;
+	color: white;
+}
+
+#menu-item:hover {
+	color: #e6b7b7;
+}
+
+.nav-link {
+	background-color: white; /* #690000*/
+	color: black;/*white*/
+}
+
+.nav-link:hover {
+	color: black;
+	}
+
+#mivzaim {
+	color:#d9534f;
+}
+
+#mivzaim:hover {
+	color: #690000;
+}
+
+.navbar {
+	margin-left: 42px;
+}
+
+.navbaren {
+	margin-right: 42px;
+}
+
+.mumlazim {
+	background-color: #690000;
+	color: white;
+}
+
+.link-hovered:hover {
+	color: #e6b7b7;
+}
+
+.card-height {
+	min-height: 75px;
+}
+
+.card-height:hover {
+	color: black;
+}
+
+
+
+hr {
+	margin: 0;
+}
+
+.brdr {
+	width: 175px;
+	height: 250px;
+	border: 4px solid #690000;
+	border-radius: 25px;
+}
+
+.hvr:hover {
+	color: black;
+}
+
+.txt {
+	color: #690000;
+}
+
+ul {list-style: none;}
+
+@media (min-width: 992px) {
+	.bgimage {
+	background-image: url(../images/bg-lg.png);
+}
+ }
+
+@media (max-width: 991.98px) {
+	.bgimage {
+	background-image: url(../images/bg-sm.png);
+}
+ }
+
+.page-link:hover {
+	background-color: black;
+	color: #e6b7b7;
+	}
+
+.page-link {
+	border-radius: 7px;
+	background-color: #333A40;
+	color: white;
+}
+
+.hrpage {margin-top: 100px;}
+
+/*mystules*/
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.topnaven input[type=text] {
+  float: left;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+
+.jumbotron {
+	background-image: url(../images/sidebar.jpg);
+	display:block;
+	max-width:100%;
+	height:auto;
+      /*background-color: #f4511e; /* Orange */
+      color: #ffffff;
+}
+.img-responsive {
+		display:block;
+		width:100%;
+		max-height:600px;
+
+}
+
+.btn:focus, .btn:active {
+  	outline: none !important;
+  	box-shadow: none !important;
+        color: black;
+}
+
+/*Categories table*/
+.tablecategories {
+	width: 100%; /* растягиваем таблицу на всю ширину контента */
+	border-collapse: collapse; /* схлопываем границы ячеек */
+}
+/*.tablecategories td {
+	padding: 2px 2px; /* для красоты добавляем отступы в ячейках */
+/*}*/
+.tablecategories img {
+	width: 100%; /* растягиваем изображение на всю ширину ячейки */
+}
+
+/*HEADER*/
+.header1 {
+  background-color:none;
+  padding: 50px 20px;
+  text-align: center;
+}
+.header1 h1 {
+  font-family: 'Merriweather', serif;
+  position: relative;
+  color: #FCF2E5;
+  background: #690000;
+  font-size: 2.5em;
+  font-weight: normal;
+  padding: 10px 40px;
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+
+}
+.header1 h1:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: -15px;
+  background: #690000;
+}
+.header1 h1:after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 80%;
+  border-top: 10px solid #690000;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+}
+@media (max-width: 500px) {
+  .header1 h1 {font-size: 1.8em;}
+}
+@media (max-width: 400px) {
+  .header1 h1 {
+    font-size: 1.5em;
+    padding: 10px 30px;
+  }
+}
+
+.discount-container{
+    position: absolute;
+    top: 30%;
+    background: #690000;
+    width: 20%;
+    color: white;
+    font-weight: 700;
+    padding: 3px;
+}
+
+
+.content1 {
+	background-size: cover;
+	background-image: url(../img/cellar-classic-shelves-774455.jpg);
+	background-position: center center;
+}
+
+.contentbox {
+	background-color:rgba(255,255,255,0.9);
+}
+
+
+/*trying to fix basket*/
+
+.basket-container{
+    position: relative;
+    width: 100px;
+    padding: 15px 10px;
+}
+
+.basket-items{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background-color: #690000;
+    z-index: 10;
+    padding: 10px;
+}
+
+
+/*paggination*/
+
+/*#content p{text-indent:20px;text-align:justify;}*/
+
+
+#pagingControls ul{
+	display: inline-block;
+	padding-left:0.5em}
+#pagingControls li{
+	display: inline-block;
+	padding:0 0.5em
+}
+/*#pagingControls ul {
+
+}
+#pagingControls li {
+
+}*/
+.pagingControls a.active {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.pagingControls a:hover:not(.active) {background-color: #ddd;}
+
+
+/*basket container*/

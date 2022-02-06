@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!--<script src="{% static 'js/jquery.min.js' %}"></script>-->
+<script src="{% static 'js/imtech_pager.js' %}"></script>
+<div class="container-fluid content1">
+<div class="container-fluid">
+			<div class="row justify-content-center py-5">
+				<div class="col-10 contentbox">
+					<div class="row my-5 justify-content-center">
+
+
+
+            <div class="section section2 phones-container">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                        <div class="header1"><h1>יין אדום</h1></div>
+                      </div>
+												<div id="content">
+
+                        {% for product_image in products_images_redwines %}
+															<div class="z">
+                            {% include 'landing/product_item.html' %}
+															</div>
+                        {% endfor %}
+
+
+											</div>
+                    </div>
+										<div id="pagingControls"></div>
+										<script type="text/javascript">
+										var pager = new Imtech.Pager();
+										$(document).ready(function() {
+										    pager.paragraphsPerPage = 9; // set amount elements per page
+										    pager.pagingContainer = $('#content'); // set of main container
+										    pager.paragraphs = $('div.z', pager.pagingContainer); // set of required containers
+										    pager.showPage(1);
+										});
+										</script>
+
+                </div>
+            </div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

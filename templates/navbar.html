@@ -1,0 +1,147 @@
+<!-- Static navbar -->
+
+{% load static %}
+
+
+
+
+    <div class="sticky-top bg-white header-sm">
+
+ <div class="container-fluid navbarbg">
+  <div class="row">
+   <div class="col-12">
+
+    <nav class="navbar mt-3">
+	<!--little navbar-->
+    <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <i class="fas fa-bars h3"></i>
+    </button>
+	<!--little navbar-->
+
+     <div class="collapse navbar-collapse navbar1" id="navbarSupportedContent">
+
+      <ul class="navbar-nav d-flex justify-content-center flex-row flex-wrap h5">
+
+	<li>
+		<div class="hdr2">
+		  		<a href="#"><img class="mx-1" src="{% static 'img/israel-flag-3d-round-icon-32.png' %}"></a>
+		  		<a href="#"><img class="mx-1" src="{% static 'img/united-kingdom-flag-3d-round-icon-32.png' %}"></a>
+		 </div>
+	</li>
+
+
+
+	<li>
+	<div class="topnav">
+      <form action="{% url 'search_results' %}" method="get">
+		  <input name="q" type="text" placeholder="חיפוס..">
+      </form>
+	</div>
+
+	</li>
+
+	<li class="nav-item active dropdown mx-3 mx-md-5">
+        <a class="nav-link navbarbg" href="http://127.0.0.1:8000/" id="navbarbg" id="mivzaim" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">דף הבית</a>
+       </li>
+
+       <li class="nav-item active dropdown mx-3 mx-md-5">
+        <a class="nav-link navbarbg" href="#" id="navbarbg" id="mivzaim" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">מבצעים</a>
+         <div class="dropdown-menu dropdown-menu-right" id="menu" aria-labelledby="navbarDropdown1">
+	      <a class="dropdown-item d-flex justify-content-start" id="menu-item" href="#">מבצעי החודש</a>
+         </div>
+       </li>
+
+       <li class="nav-item active dropdown mx-3 mx-md-5">
+        <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">קטגוריות</a>
+         <div class="dropdown-menu dropdown-menu-right" id="menu" aria-labelledby="navbarDropdown2">
+	          <a class="dropdown-item d-flex justify-content-start" id="menu-item" href="{% url 'redwines'  %}">יין אדום</a>
+          <a class="dropdown-item d-flex justify-content-start" id="menu-item" href="{% url 'whitewines'  %}">יין לבן</a>
+          <a class="dropdown-item d-flex justify-content-start" id="menu-item" href="{% url 'sparklingwines'  %}">יין מבעבע</a>
+	<a class="dropdown-item d-flex justify-content-start" id="menu-item" href="#">משקאות חריפות</a>
+          <a class="dropdown-item d-flex justify-content-start" id="menu-item" href="#">ליקר</a>
+         </div>
+       </li>
+
+
+       <li class="nav-item active dropdown mx-3 mx-md-5">
+        <a class="nav-link" href="#" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">חנות</a>
+         <div class="dropdown-menu dropdown-menu-right" id="menu5" aria-labelledby="navbarDropdown5">
+          <a class="dropdown-item d-flex justify-content-start" id="menu-item" href="#">חנויות</a>
+          <a class="dropdown-item d-flex justify-content-start" id="menu-item" href="#">חדשות</a>
+          <a class="dropdown-item d-flex justify-content-start" id="menu-item" href="#">צוות</a>
+          <a class="dropdown-item d-flex justify-content-start" id="menu-item" href="#">משלוחים</a>
+          <a class="dropdown-item d-flex justify-content-start" id="menu-item" href="#">FAQ</a>
+         </div>
+       </li>
+
+	<!--cart-->
+  <li class="nav-item navbar-nav active dropdown mx-3 mx-md-5">
+       <a class="nav-link" href="" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><!--<button class="btn btn-white" data-toggle="modal" data-target="#modal1">-->
+        <span id="basket_total_nmb">
+          {% if products_total_nmb %}
+             {{ products_total_nmb }}
+          {% else %}
+              0
+          {% endif %}
+          </span>
+      <i class="fas fa-shopping-basket hvr h3"></i><!--</button>--></a>
+      <div class="dropdown-menu dropdown-menu-right basket-container" id="menu6" aria-labelledby="navbarDropdown6">
+          <ul class="" id="menu-item">
+              {% for product_in_basket in products_in_basket %}
+                  <li>
+                      {{ product_in_basket.product.name }} {{ product_in_basket.nmb }}
+                      по {{ product_in_basket.price_per_item }} ₪.
+                      <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">x</a>
+                      <hr>
+                  </li>
+              {% endfor %}
+              <li>
+                  <a href="{% url 'checkout' %}">
+                      להזמנה
+                  </a>
+              </li>
+          </ul>
+      </div>
+            </li>
+          </ul>
+<!--      <div class="basket-items hidden">
+          <div class="dropdown-menu dropdown-menu-right" id="menu5" aria-labelledby="navbarDropdown6">
+              {% for product_in_basket in products_in_basket %}
+                  <li>
+                      {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт.
+                      по {{ product_in_basket.price_per_item }} грн.
+                      <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">x</a>
+                  </li>
+              {% endfor %}
+              <li>
+                  <a href="{% url 'checkout'  %}">
+                      Оформить заказ
+                  </a>
+              </li>
+          </ul>
+          </div>
+    </li>
+      </div>
+  </div>
+-->
+  <!--
+	<button class="btn btn-white" data-toggle="modal" data-target="#modal1"><span class="badge badge-pill badge-dark align-top mumlazim" id="basket_total_nmb">{% if products_total_nmb %}
+      ({{ products_total_nmb }})
+  {% else %}
+      0
+  {% endif %}</span><i class="fas fa-shopping-basket hvr h3"></i></button>
+	</li>
+
+  </ul>
+-->
+     </div>
+
+    </nav>
+    </div>
+
+  </div>
+ </div>
+
+<hr class="border border-dark">
+
+</div>

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="section-top">
+        <img src="{% static 'img/sidebar.jpg' %}" class="img-responsive">
+    </div>
+    <div class="section section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header1"><h1>מוצרים חדשים</h1></div>
+                </div>
+                {% for product_image in products_images_whitewines %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="header1"><h1>קטגוריות</h1></div>
+    </div>
+    <!--mycontent1-->
+    <div class="container-fluid">
+    <table class="tablecategories">
+    	<tr>
+    		<td><img src="{% static 'img/redwine.jpg' %}" alt="" /></td>
+    		<td><img src="{% static 'img/whitewine.jpg' %}" alt="" /></td>
+    	</tr>
+    	<tr>
+    		<td><img src="{% static 'img/sparklingwine.jpg' %}" alt="" /></td>
+    		<td><img src="{% static 'img/spirits.jpg' %}" alt="" /></td>
+    	</tr>
+    	<tr>
+    	<td><img src="{% static 'img/liquors.jpg' %}" alt="" /></td>
+    	<td><img src="{% static 'img/specials.jpg' %}" alt="" /></td>
+    	</tr>
+    </table>
+    </div>
+
+
+
+
+
+
+{% endblock %}

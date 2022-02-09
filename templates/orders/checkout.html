@@ -7,8 +7,8 @@
         <div class="row">
             {% if products_in_basket %}
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h3 class="text-center">Товары в корзине</h3>
-                    <h5 class="text-center">Общая стоимость: {{ request.session.basket.total_amount }} грн </h5>
+                    <h3 class="text-center">mjhvb</h3>
+                    <h5 class="text-center">Total price: {{ request.session.basket.total_amount }} </h5>
                             {{ request.session.basket.products }}
 
                     <form class="form-horizontal" method="post">{% csrf_token %}
@@ -37,10 +37,10 @@
                         <table class="table text-center">
                             <thead>
                                 <tr>
-                                    <th>Название товара</th>
-                                    <th>Количество</th>
-                                    <th>Цена за еденицу</th>
-                                    <th>Общая цена</th>
+                                    <th>Name</th>
+                                    <th>Quantity</th>
+                                    <th>Price per item</th>
+                                    <th>Total price</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -69,7 +69,7 @@
                         </table>
 
                         <div class="text-right">
-                            <b>Сумма заказа: </b> <span id="total_order_amount">54</span>
+                            <b>Total: </b> <span id="total_order_amount">54</span>
                         </div>
 
                         <hr>
@@ -82,7 +82,7 @@
 
                 </div>
              {% else %}
-                <h3 class="text-center">В Вашей корзине нет товаров</h3>
+                <h3 class="text-center">Basket is empty</h3>
             {% endif %}
 
         </div>

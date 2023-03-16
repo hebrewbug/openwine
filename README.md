@@ -23,7 +23,7 @@ The following are the files and folders included in this Django project:
 
 To deploy Openwine.co.il on your local server, follow these steps:
 
-1. Clone the repository to your local machine using `git clone https://github.com/hebrewbug/openw.git`.
+1. Clone the repository to your local machine using `git clone https://github.com/hebrewbug/openwine.git`.
 2. Install the required packages by running `pip install -r requirements.txt`.
 3. Create a superuser by running `python manage.py createsuperuser` and following the prompts.
 4. Migrate the database schema by running `python manage.py migrate`.
